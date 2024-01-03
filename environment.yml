@@ -1,0 +1,26 @@
+name: flexible-probing
+channels:
+  - plotly
+  - conda-forge
+  - pytorch
+dependencies:
+  - pytorch=1.8.1
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.3
+  - python=3.8
+  - pyyaml
+  - mypy
+  - tqdm
+  - overrides=3.1.0
+  - flake8
+  - pycountry
+  - plotly
+  - requests
+  - plotly-orca
+  - numpy
+  - pandas
+  - pip:
+      - wandb
+      - git+https://github.com/harvardnlp/pytorch-struct@v0.5
+      - git+https://github.com/harvardnlp/genbmm

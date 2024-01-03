@@ -1,0 +1,24 @@
+program: run.py
+method: grid
+metric:
+    name: mi
+    goal: maximize
+parameters:
+    language:
+        value: "eng"
+    attribute:
+        value: "Number"
+    trainer:
+        value: "lowerbound"
+    l1-weight:
+        values: [0, 1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1]
+    l2-weight:
+        values: [0, 1e-7, 1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1]
+command:
+    - ${env}
+    - ${interpreter}
+    - ${program}
+    - "--gpu"
+    - "--wandb"
+    - ${args}
+    - "manual"
